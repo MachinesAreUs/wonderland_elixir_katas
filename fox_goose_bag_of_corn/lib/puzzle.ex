@@ -5,23 +5,7 @@ defmodule FoxGooseBagOfCorn.Puzzle do
   ]
 
   def river_crossing_plan do
-    [
-      [[:fox, :goose, :corn ,:you], [:boat]              , []],
-      [[:fox, :corn]              , [:boat, :goose, :you], []],
-      [[:fox, :corn]              , [:boat]              , [:goose, :you]],
-      [[:fox, :corn]              , [:boat, :you]        , [:goose]],
-      [[:fox, :corn, :you]        , [:boat]              , [:goose]],
-      [[:fox]                     , [:boat, :corn, :you] , [:goose]],
-      [[:fox]                     , [:boat]              , [:goose, :corn, :you]],
-      [[:fox]                     , [:boat, :goose, :you], [:corn]],
-      [[:fox, :goose, :you]       , [:boat]              , [:corn]],
-      [[:goose]                   , [:boat, :fox, :you]  , [:corn]],
-      [[:goose]                   , [:boat]              , [:corn, :fox, :you]],
-      [[:goose]                   , [:boat, :you]        , [:corn, :fox]],
-      [[:goose, :you]             , [:boat]              , [:corn, :fox]],
-      [[]                         , [:boat, :goose, :you], [:corn, :fox]],
-      [[]                         , [:boat]              , [:fox, :goose, :corn, :you]]
-    ]
+    "implement me!"
   end
 
   def to_set(list) when is_list(list), do: Enum.into(list, HashSet.new)
