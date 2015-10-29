@@ -32,7 +32,7 @@ If you haven't solved your kata yet - Don't Peek!
 
 ## License
 
-Copyright © 2014 Agustín Ramos
+Copyright © 2015 Agustín Ramos
 
 Copyright © 2014 Carin Meier
 
