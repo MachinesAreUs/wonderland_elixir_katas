@@ -11,6 +11,5 @@ defmodule MagicSquare.PuzzleTest do
     Enum.each [sum_rows, sum_cols, sum_diag], &(assert 1 = Set.size(&1))
     assert Set.equal? sum_rows, sum_cols
     assert Set.equal? sum_rows, sum_diag
-
   end
 end
