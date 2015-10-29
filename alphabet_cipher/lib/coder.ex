@@ -1,4 +1,4 @@
-defmodule Coder do
+defmodule AlphabetCipher.Coder do
 
   def encode(keyword, message) do
     "encodeme"

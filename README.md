@@ -1,4 +1,4 @@
-# wonderland-elixir-katas
+# wonderland_elixir_katas
 
 This is an Elixir port of wonderland-clojure-katas.
 

@@ -1,6 +1,6 @@
 # doublets
 
-This Clojure Kata comes from _Alice in Wonderland_'s author, Lewis
+This Kata comes from _Alice in Wonderland_'s author, Lewis
 Carroll. He came up with this word puzzle that he named _Doublets_.
 
 ![Mad Hatter](/images/madhatter.gif)

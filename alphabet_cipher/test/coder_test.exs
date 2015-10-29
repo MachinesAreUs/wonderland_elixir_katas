@@ -1,32 +1,25 @@
-defmodule CoderTest do
+defmodule AlphabetCipher.CoderTest do
   use ExUnit.Case
-  import Coder
+  import AlphabetCipher.Coder
 
-  test "Can encode given a secret keyword. Example 1" do
-    assert "egsgqwtahuiljgs" = 
+  test "Can encode given a secret keyword" do
+    assert "egsgqwtahuiljgs" == 
            encode("scones", "meetmebythetree") 
-    assert "hmkbxebpxpmyllyrxiiqtoltfgzzv" = 
+    assert "hmkbxebpxpmyllyrxiiqtoltfgzzv" == 
            encode("vigilance", "meetmeontuesdayeveningatseven")
   end
 
   test "Can decode an cyrpted message given a secret keyword" do
-    assert "meetmebythetree" = 
+    assert "meetmebythetree" == 
            decode("scones", "egsgqwtahuiljgs")
-    assert "meetmeontuesdayeveningatseven" =
+    assert "meetmeontuesdayeveningatseven" ==
            decode("vigilance", "hmkbxebpxpmyllyrxiiqtoltfgzzv")
   end
 
   test "Can extract the secret keyword given an encrypted message and the original message" do
-    assert "vigilance" = 
-           decipher("opkyfipmfmwcvqoklyhxywgeecpvhelzg", "thequickbrownfoxjumpsoveralazydog")
-    assert "scones" =
+    assert "scones" ==
            decipher("hcqxqqtqljmlzhwiivgbsapaiwcenmyu", "packmyboxwithfivedozenliquorjugs")
-  end
-
-  test "Can extract the secret keyword given an encrypted message and the original message" do
-    assert "scones" =
-           decipher("hcqxqqtqljmlzhwiivgbsapaiwcenmyu", "packmyboxwithfivedozenliquorjugs")
-    assert "vigilance" = 
+    assert "vigilance" == 
            decipher("opkyfipmfmwcvqoklyhxywgeecpvhelzg", "thequickbrownfoxjumpsoveralazydog")
   end
 

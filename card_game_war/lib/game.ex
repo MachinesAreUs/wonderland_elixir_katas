@@ -1,4 +1,4 @@
-defmodule Game do
+defmodule CardGameWar.Game do
 
   # feel free to use these cards or use your own data structure"
   def suits, do: [:spade, :club, :diamond, :heart]
@@ -9,6 +9,5 @@ defmodule Game do
       {suit, rank}
     end
   end
-
 
 end

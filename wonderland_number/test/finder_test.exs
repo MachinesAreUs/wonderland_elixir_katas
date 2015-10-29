@@ -17,7 +17,7 @@ defmodule WonderlandNumber.FinderTest do
 
   test "A wonderland number must have the following things true about it" do
     wondernum = wonderland_number
-    assert 6 = wondernum |> Integer.to_string |> String.length
+    assert 6 == wondernum |> Integer.to_string |> String.length
     assert has_all_the_same_digits? wondernum, (2 * wondernum)
     assert has_all_the_same_digits? wondernum, (3 * wondernum)
     assert has_all_the_same_digits? wondernum, (4 * wondernum)
