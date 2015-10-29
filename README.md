@@ -1,6 +1,6 @@
 # wonderland_elixir_katas
 
-This is an Elixir port of wonderland-clojure-katas.
+This is an Elixir port of [wonderland-clojure-katas](https://github.com/gigasquid/wonderland-clojure-katas).
 
 These are a collection of Elixir
 [katas](http://en.wikipedia.org/wiki/Kata_%28programming%29) inspired by
