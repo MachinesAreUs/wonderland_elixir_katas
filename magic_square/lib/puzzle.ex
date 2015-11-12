@@ -40,7 +40,7 @@ defmodule MagicSquare.Puzzle do
   end
 
   def sum_rows(m) do
-    Enum.map m, fn(r) -> Enum.reduce(r, &(&1+&2)) end
+    m |> Enum.map fn(r) -> Enum.reduce(r, &(&1+&2)) end
   end
 
   def sum_cols(m) do
