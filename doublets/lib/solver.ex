@@ -44,12 +44,11 @@ defmodule Doublets.Solver do
   end
 
   def find_doublets(w, dict) do
-    Enum.filter dict, fn(dw) -> 
-      diff = Enum.zip(w, dw)
-               |> Enum.reduce(0, fn({a,b}, acc) -> 
-                    if a != b, do: acc + 1, else: acc
-                  end)
-      diff == 1
-    end 
+    Enum.filter dict, fn(dw) -> count_differences(w, dw) == 1 end
+  end
+
+  def count_differences(w1, w2) do
+     Enum.zip(w1, w2)
+       |> Enum.reduce 0, fn({a,b}, acc) -> if a != b, do: acc + 1, else: acc end
   end
 end
