@@ -3,20 +3,20 @@ defmodule WonderlandNumber.FinderTest do
   import WonderlandNumber.Finder
 
   def to_charset(n) do
-    n |> Integer.to_string 
-      |> to_char_list 
-      |> Enum.map(&[&1]) 
-      |> Enum.into(HashSet.new)
+    n |> Integer.to_string()
+      |> to_charlist()
+      |> Enum.map(&[&1])
+      |> Enum.into(MapSet.new)
   end
 
   def has_all_the_same_digits?(n1, n2) do
     s1 = to_charset n1
     s2 = to_charset n2
-    Set.equal? s1, s2
+    MapSet.equal? s1, s2
   end
 
   test "A wonderland number must have the following things true about it" do
-    wondernum = wonderland_number
+    wondernum = wonderland_number()
     assert 6 == wondernum |> Integer.to_string |> String.length
     assert has_all_the_same_digits? wondernum, (2 * wondernum)
     assert has_all_the_same_digits? wondernum, (3 * wondernum)
