@@ -13,8 +13,8 @@ defmodule FoxGooseBagOfCorn.Puzzle do
     ] 
   end
 
-  def to_set(list) when is_list(list), do: Enum.into(list, HashSet.new)
-  def step_to_sets(step), do: step |> Enum.map &to_set/1
+  def to_set(list) when is_list(list), do: Enum.into(list, MapSet.new)
+  def step_to_sets(step), do: step |> Enum.map(&to_set/1)
 
   @doc """
     Defines a sigil for a HashSet of atoms
